@@ -16,8 +16,46 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      :root {
+        --font-family: "Outfit", sans-serif;
+        --background: hsl(212, 45%, 89%);
+        --background-card: hsl(0, 0%, 100%);
+        --foreground-card: hsl(218, 44%, 22%);
+        --muted-card: hsl(216, 15%, 48%);
+      }
+
+      .font-bold {
+        font-size: 22px;
+        line-height: 120%;
+        letter-spacing: -1px;
+        font-weight: 700;
+      }
+
+      .font-regular {
+        font-size: 15px;
+        line-height: 140%;
+        letter-spacing: 0.2px;
+        font-weight: 400;
+      }
+
+      .card-title {
+        color: var(--foreground-card);
+        margin-bottom: 16px;
+      }
+
+      .card-subtitle {
+        color: var(--muted-card);
+      }
+
+      p,
+      h1 {
+        padding: 0px;
+        margin: 0px;
+      }
+
       body {
-        background-color: hsl(212, 45%, 89%);
+        background-color: var(--background);
+        font-family: var(--font-family);
         margin: 0px;
         padding: 0px;
         height: 100vh;
@@ -25,55 +63,53 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        font-family: "Outfit", sans-serif;
+        row-gap: 1rem;
       }
+
       .attribution {
         font-size: 11px;
         text-align: center;
       }
+
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+
       .card {
-        background-color: white;
-        padding: 16px 0px 40px 0px;
-        border-radius: 1rem;
-        margin: 0.5rem;
-        max-width: 320px;
+        background-color: var(--background-card);
+        padding: 16px 16px 40px 16px;
+        border-radius: 20px;
+        max-width: 288px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        row-gap: 1rem;
         text-align: center;
       }
+
       img {
         height: 288px;
         width: 288px;
+        border-radius: 10px;
+        margin-bottom: 24px;
       }
-      h1 {
-        margin: 0px;
-        color: hsl(218, 44%, 22%);
-        font-weight: 700;
-        font-size: 22px;
-        padding: 0px 1rem;
-      }
-      p {
-        margin: 0px;
-        color: hsl(216, 15%, 48%);
-        padding: 0px 1rem;
-        font-size: 16.5px;
-        font-weight: 400;
+
+      .content-section {
+        padding: 0px 16px;
       }
     </style>
   </head>
   <body>
     <main class="card">
       <img src="./images/image-qr-code.png" alt="QR code" />
-      <h1>Improve your front-end skills by building projects</h1>
-      <p>
-        Scan the QR code to visit frontend Mentor and take your coding skills to
-        the next level
-      </p>
+      <section class="content-section">
+        <h1 class="font-bold card-title">
+          Improve your front-end skills by building projects
+        </h1>
+        <p class="font-regular card-subtitle">
+          Scan the QR code to visit frontend Mentor and take your coding skills
+          to the next level
+        </p>
+      </section>
     </main>
 
     <footer class="attribution">
