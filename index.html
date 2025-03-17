@@ -19,9 +19,9 @@
       :root {
         --font-family: "Outfit", sans-serif;
         --background: hsl(212, 45%, 89%);
-        --background-card: hsl(0, 0%, 100%);
-        --foreground-card: hsl(218, 44%, 22%);
-        --muted-card: hsl(216, 15%, 48%);
+        --card: hsl(0, 0%, 100%);
+        --card-foreground: hsl(218, 44%, 22%);
+        --card-muted: hsl(216, 15%, 48%);
       }
 
       .font-bold {
@@ -39,12 +39,12 @@
       }
 
       .card-title {
-        color: var(--foreground-card);
+        color: var(--card-foreground);
         margin-bottom: 16px;
       }
 
       .card-subtitle {
-        color: var(--muted-card);
+        color: var(--card-muted);
       }
 
       p,
@@ -76,7 +76,7 @@
       }
 
       .card {
-        background-color: var(--background-card);
+        background-color: var(--card);
         padding: 16px 16px 40px 16px;
         border-radius: 20px;
         max-width: 288px;
